@@ -1,0 +1,124 @@
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Crete Round', serif;*/
+/*font-family: 'Poppins', sans-serif;*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width:100%;
+    height: 100%;
+    background-color: #1C1A19;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center; 
+    padding: 1rem 1rem;
+    margin: 1rem 0 0 1rem;
+}
+
+nav i {
+    color: #ffffff;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem 0 0; 
+}
+
+nav a{
+    font-size: 2rem;
+}
+
+nav i:hover{
+    color:#FF6B00
+}
+
+.headline{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.headline h1{
+    font-family: 'Crete Round', serif;
+    color:#FF6B00;
+    font-size: 2.8rem;
+    text-align: justify;
+    margin: 4rem 0 0 2rem;
+}
+
+.headline .title{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: .8rem 0 .8rem 2rem;
+}
+
+.headline .content{
+    font-family: 'Poppins', sans-serif;
+    color:#ffffff;
+    font-size: 1rem;
+    padding:0 2rem;
+    margin: 0 .5 .8rem .8rem;
+    line-height: 1.5rem;   
+}
+
+footer ul{
+    width:50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4rem 0 0 2rem;
+}
+
+footer li{
+    list-style-type: none;
+   
+}
+
+footer a{
+    color: #e7e4e4;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+footer a:hover{
+    color: #FF6B00;
+}
+
+@media only screen and (min-width: 375px){
+    .headline{
+        display: block;
+    }
+
+    footer ul{
+        margin-top:6rem;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .headline h1{
+        color: #ffffff;
+        font-size: 3.5rem;
+    }
+
+    .headline .title{
+        color: #FF6B00;
+        font-size: 2rem;
+    }
+
+    footer ul{
+        justify-content: space-evenly;
+    }
+}

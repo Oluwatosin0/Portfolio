@@ -2,7 +2,7 @@
 
 Portfolio project exercise is fostered towards understanding how you can:
 
-1) parse a Figma desgin to build a UI
+1) parse a Figma design to build a UI
 2) apply flexbox to elements in the page
 3) build a portfolio website
 4) add linters
