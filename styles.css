@@ -64,9 +64,8 @@ nav a{
     background-size: 40% 40%;
 }
 
-#headline{
-      
-}
+/*#headline{
+}*/
 
 #headline h1{
     font-family: 'Crete Round', serif;
@@ -117,11 +116,7 @@ nav a{
 }
 
 
-/*Work-section*/
-#portfolio{
-    width: 100%;
-    min-height: 100vh;
-}
+
 
 
  
