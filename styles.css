@@ -54,9 +54,7 @@ nav a{
 #introduction{
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center; 
+    position: relative;
     background-color: #1C1A19;
     background-image: url(./assets/images/Illustration-header@2x.png);
     background-repeat: no-repeat;
@@ -65,7 +63,10 @@ nav a{
 }
 
 #headline{
-      
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
 }
 
 #headline h1{
@@ -73,7 +74,7 @@ nav a{
     color:#FF6B00;
     font-size: 2.5rem;
     text-align: justify;
-    margin: 7rem 0 0 2rem;
+    margin: 6rem 0 0 2rem;
 }
 
 #headline .title{
@@ -123,12 +124,281 @@ nav a{
     min-height: 100vh;
 }
 
+#portfolio .title{
+    display: inline;   
+}
+
+#portfolio .title p{
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    color: #1C1A19;
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0 2.5rem 0;
+}
+
+#portfolio .title hr{
+   width: 80%;
+   margin:0 auto; 
+}
+
+#card-container{
+    display: grid;
+    margin: 3rem 0 6rem 0;
+}
+
+#first-card{
+    display:flex;
+    flex-wrap: wrap;  
+}
+
+#first-card img{
+    width: 90%;
+    margin: 0 auto   
+}
+
+.card-content{
+    width:90%;
+    margin:0 auto;
+}
+
+#first-card h1{
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #091E42;
+    margin:1.5rem 0 0 0;
+}
+
+#first-card p{
+    margin-top:1rem;
+    font-family: 'Inter', sans-serif;
+    color:#091E42;
+}
+
+.language{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.class-list{
+    list-style-type: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.class-list a{
+    color: #091E42;
+    padding:1rem;
+    font-size: .7rem;
+    text-decoration: none;
+    border: 1px solid #8993A4;
+    margin: .3rem;
+}
+
+#first-card button{
+    background-color: #FF6B00;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+    margin: 2rem 0 0 .3rem;
+    border: none;
+}
+
+.second-card{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.second-card img{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card2-content{
+    width:90%;
+    margin-top: 4.5rem;
+    position: absolute;
+    
+}
+
+.second-card h1{
+    width: 80%;
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-left: 1.8rem;
+}
+
+.second-card p{
+    margin:1rem 0 0 1.8rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+}
+.languages{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.class-lists{
+    list-style-type: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.class-lists a{
+    background-color: rgba(255, 255, 255, .2);
+    color: #ffffff;
+    font-weight: bold;
+    padding:.8rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    margin: 0 0 2rem 1.8rem;
+}
+.second-card .btn{
+    position: absolute;
+    background-color: #FF6B00;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem ;
+    text-align: center;
+    padding: 1rem 7.6rem;
+    margin: 5.5rem 0 0 1rem;
+    white-space: nowrap;
+    border: none;
+}
+
+
+/*About me*/
+#about{
+    width: 100%;
+    min-height: 100vh;
+    /*position:relative;*/
+    background-color: #1C1A19;
+    /*background-image: url(./assets/images/illustration-about\ me@2x.png);
+    background-repeat: no-repeat;
+    background-position:center right;
+    background-size: 40% 20%;*/
+}
+
+#about-title{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#about-title h1{
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    color:#FF6B00;
+    font-size: 3.5rem;
+    text-align: justify;
+    margin: 5rem 0 0 2rem;
+}
+
+#about-title .content{
+    font-family: 'Poppins', sans-serif;
+    color:#ffffff;
+    font-size: 1rem;
+    padding:0 2rem;
+    margin: .7rem .5rem .8rem 0 ;
+    line-height: 1.5rem;   
+}
+
+#resume-btn{
+    background-color: #FF6B00;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .7rem 1rem;
+    margin: 1rem 0 1rem 2rem;
+    border: none;
+}
+
+#resume-btn:hover{
+    background-color: #FFF5E1;
+    color: #FF6B00;
+}
+
+#resume-btn:active{
+    background-color: #E05304;
+    ;
+}
+
+#about-title img{
+    width: 90%;
+    height: 70%;
+    margin-left: 12rem;
+    margin-bottom: 2rem;
+}
+
+#about-title hr{
+    width: 80%;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.frameworks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.Lang{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color:#ffffff;
+    margin-top: 1rem;
+}
+
+.Lang span{
+    display: inline-block;
+    padding: .5rem;
+    
+}
+
+.Lang li{
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
 
  
 /*Media Query*/
 @media only screen and (min-width: 375px){ 
+    #headline .content{
+        width: 80%;
+    }
+
     .social ul{
-        margin-top:6rem;
+        margin:3rem 0 0 1.8rem;
     }
     }
     
@@ -198,8 +468,10 @@ nav a{
     
     .social ul{
         display:block;
-        margin-left: 2rem;
-        margin-top: -30rem;
+        position: absolute;
+        top:15%;
+        right:58%;
+       
     }
     
     .social li{
