@@ -2,11 +2,12 @@
 
 Portfolio project exercise is fostered towards understanding how you can:
 
-1) parse a Figma design to build a UI
-2) apply flexbox to elements in the page
-3) build a portfolio website
-4) add linters
-5) use images and backgrounds to enhance the page
+1) Parse a Figma design to build a UI
+2) Use Flexbox to place elements in the page
+3) Use CSS Grid to place elements in the page
+4) Build a portfolio website
+5) Add linters
+6) Use images and backgrounds to enhance the page
 
 
 # This Project was built using:
