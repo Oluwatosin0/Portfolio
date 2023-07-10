@@ -14,7 +14,7 @@
 body{
     width:100%;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 nav{
@@ -212,7 +212,7 @@ nav a{
     display:flex;
     flex-wrap: wrap;
     margin-top: 2rem;
-    position: relative;
+    
 }
 
 .second-card img{
@@ -222,9 +222,7 @@ nav a{
 
 .card2-content{
     width:90%;
-    margin-top: 4.5rem;
-    position: absolute;
-    
+    margin-top: 4.5rem; 
 }
 
 .second-card h1{
@@ -243,7 +241,6 @@ nav a{
     color: #ffffff;
 }
 .languages{
-    position: absolute;
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
@@ -266,7 +263,6 @@ nav a{
     margin: 0 0 2rem 1.8rem;
 }
 .second-card .btn{
-    position: absolute;
     background-color: #FF6B00;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
@@ -369,8 +365,7 @@ nav a{
 
 .Lang span{
     display: inline-block;
-    padding: .5rem;
-    
+    padding: .5rem;   
 }
 
 .Lang li{
