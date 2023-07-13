@@ -14,7 +14,7 @@
 body{
     width:100%;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 nav{
@@ -81,7 +81,7 @@ nav a{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: .8rem 0 .8rem 2rem;
 }
 
@@ -90,7 +90,7 @@ nav a{
     color:#ffffff;
     font-size: 1rem;
     padding:0 2rem;
-    margin: 0 .5rem .8rem 0 .8rem;
+    margin: .5rem .8rem 0 0;
     line-height: 1.5rem;   
 }
 
@@ -124,11 +124,8 @@ nav a{
     min-height: 100vh;
 }
 
-#portfolio .title{
-    display: inline;   
-}
 
-#portfolio .title p{
+#portfolio p{
     font-family: 'Crete Round', serif;
     font-weight: 400;
     color: #1C1A19;
@@ -137,7 +134,7 @@ nav a{
     margin: 2rem 0 2.5rem 0;
 }
 
-#portfolio .title hr{
+#portfolio hr{
    width: 80%;
    margin:0 auto; 
 }
@@ -149,12 +146,14 @@ nav a{
 
 #first-card{
     display:flex;
-    flex-wrap: wrap;  
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;   
 }
 
 #first-card img{
     width: 90%;
-    margin: 0 auto   
+    margin: 0 auto;  
 }
 
 .card-content{
@@ -165,13 +164,15 @@ nav a{
 #first-card h1{
     font-family: 'Crete Round', serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #091E42;
     margin:1.5rem 0 0 0;
 }
 
 #first-card p{
     margin-top:1rem;
+    font-size: 1rem;
+    text-align: left;
     font-family: 'Inter', sans-serif;
     color:#091E42;
 }
@@ -179,7 +180,7 @@ nav a{
 .language{
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .class-list{
@@ -190,11 +191,10 @@ nav a{
 
 .class-list a{
     color: #091E42;
-    padding:1rem;
-    font-size: .7rem;
+    padding:.5rem;
+    font-size: .8rem;
     text-decoration: none;
     border: 1px solid #8993A4;
-    margin: .3rem;
 }
 
 #first-card button{
@@ -202,51 +202,57 @@ nav a{
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 1rem;
-    padding: 1rem 1.2rem;
-    margin: 2rem 0 0 .3rem;
+    font-size: .8rem;
+    padding: .7rem 1rem;
+    margin-top: 1.5rem;
     border: none;
 }
 
 .second-card{
     display:flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 2rem;
-    position: relative;
 }
 
-.second-card img{
-    width: 90%;
-    margin: 0 auto;
+.card-img {
+    position: relative;
+       
+}
+
+.card-img img{
+    max-width:100%;;
+    height: auto;
+    margin-top: 1rem;
 }
 
 .card2-content{
-    width:90%;
-    margin-top: 4.5rem;
     position: absolute;
-    
+    top: 18%; 
 }
 
 .second-card h1{
-    width: 80%;
     font-family: 'Crete Round', serif;
     font-weight: 400;
     font-size: 2rem;
+    padding: .5rem;
     color: #ffffff;
-    margin-left: 1.8rem;
 }
 
-.second-card p{
-    margin:1rem 0 0 1.8rem;
+.second-card h3{
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
     color: #ffffff;
+    font-size: 1rem;
+    text-align: left;
+    margin-top: -.3rem;
+    padding: .5rem;
 }
+
 .languages{
-    position: absolute;
     display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+    padding: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .class-lists{
@@ -258,25 +264,34 @@ nav a{
 .class-lists a{
     background-color: rgba(255, 255, 255, .2);
     color: #ffffff;
-    font-weight: bold;
-    padding:.8rem;
+    padding:.7rem;
     font-size: 1rem;
+    margin: .3rem;
     text-decoration: none;
     border: none;
-    margin: 0 0 2rem 1.8rem;
 }
-.second-card .btn{
-    position: absolute;
+
+.card2-content .btn{
+    width: 100%;
     background-color: #FF6B00;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 1rem ;
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    margin-bottom: 3rem;
     text-align: center;
-    padding: 1rem 7.6rem;
-    margin: 5.5rem 0 0 1rem;
-    white-space: nowrap;
     border: none;
+    white-space: nowrap;    
+}
+
+.card2-content .btn:hover{
+    background-color: #FFF5E1;
+    color: #FF6B00;
+}
+
+.card2-content .btn:active{
+    background-color: #E05304;
 }
 
 
@@ -284,12 +299,11 @@ nav a{
 #about{
     width: 100%;
     min-height: 100vh;
-    /*position:relative;*/
     background-color: #1C1A19;
-    /*background-image: url(./assets/images/illustration-about\ me@2x.png);
+    background-image: url(./assets/images/illustration-about\ me@2x.png);
     background-repeat: no-repeat;
-    background-position:center right;
-    background-size: 40% 20%;*/
+    background-position: 220% 32%;
+    background-size: 75%;
 }
 
 #about-title{
@@ -323,7 +337,7 @@ nav a{
     font-weight: 700;
     font-size: 1rem;
     padding: .7rem 1rem;
-    margin: 1rem 0 1rem 2rem;
+    margin: 1rem 0 10rem 2rem;
     border: none;
 }
 
@@ -334,14 +348,6 @@ nav a{
 
 #resume-btn:active{
     background-color: #E05304;
-    ;
-}
-
-#about-title img{
-    width: 90%;
-    height: 70%;
-    margin-left: 12rem;
-    margin-bottom: 2rem;
 }
 
 #about-title hr{
@@ -351,44 +357,38 @@ nav a{
 }
 
 .frameworks{
+    margin-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+.Lang{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
-    padding-bottom: 5rem;
-}
-
-.Lang{
     font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     color:#ffffff;
     margin-top: 1rem;
 }
 
 .Lang span{
-    display: inline-block;
-    padding: .5rem;
-    
+    margin-right: 1rem;    
+}
+
+.Lang img{
+    margin-top: 1rem;
+    margin-right: .5rem;
 }
 
 .Lang li{
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: .8rem;
     text-align: center;
     margin-top: 1rem;
 }
-
-
-
-
-
-
-
-
-
 
  
 /*Media Query*/
@@ -398,7 +398,7 @@ nav a{
     }
 
     .social ul{
-        margin:3rem 0 0 1.8rem;
+        margin:3rem 0 0 4rem;
     }
     }
     
