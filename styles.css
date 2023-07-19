@@ -58,8 +58,8 @@ nav a{
     background-color: #1C1A19;
     background-image: url(./assets/images/Illustration-header@2x.png);
     background-repeat: no-repeat;
-    background-position:right bottom;
-    background-size: 40% 40%;
+    background-position: 220% 90%;
+    background-size: 75%;
 }
 
 #headline{
@@ -123,7 +123,6 @@ nav a{
     width: 100%;
     min-height: 100vh;
 }
-
 
 #portfolio p{
     font-family: 'Crete Round', serif;
@@ -206,6 +205,7 @@ nav a{
     padding: .7rem 1rem;
     margin-top: 1.5rem;
     border: none;
+    cursor: pointer;
 }
 
 .second-card{
@@ -225,6 +225,7 @@ nav a{
     height: auto;
     margin-top: 1rem;
 }
+
 
 .card2-content{
     position: absolute;
@@ -282,7 +283,8 @@ nav a{
     margin-bottom: 3rem;
     text-align: center;
     border: none;
-    white-space: nowrap;    
+    white-space: nowrap;  
+    cursor: pointer;  
 }
 
 .card2-content .btn:hover{
@@ -337,8 +339,9 @@ nav a{
     font-weight: 700;
     font-size: 1rem;
     padding: .7rem 1rem;
-    margin: 1rem 0 10rem 2rem;
+    margin: 1rem 0 12rem 2rem;
     border: none;
+    cursor: pointer;
 }
 
 #resume-btn:hover{
@@ -390,16 +393,154 @@ nav a{
     margin-top: 1rem;
 }
 
+/*contact section*/
+.contact{
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-text{
+    margin: 6rem 0 6rem 0; 
+}
+
+.contact-text h2{
+    width: 90%;
+    margin: 0 auto;
+    color: #172B4D;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 1.7rem; 
+}
+
+form{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    padding: .6rem;
+    color:#979493;
+    border: none;
+}
+
+#message{
+    width: 100%;
+    height: 50%;
+    background-color:#FBF8F7;
+    font-style: italic;
+    padding: .6rem;
+}
+
+form button{
+    background-color: #FF6B00;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    padding: .7rem;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover{
+    background-color: #FFF5E1;
+    color: #FF6B00;
+}
+
+form button:active{
+    background-color: #E05304;
+}
+
+
+/*footer*/
+footer{
+    margin-top: 3rem;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 3rem 0;
+
+}
+
+.footer-icons li{
+    list-style-type: none;
+}
+.footer-icons a{
+    color: #505F79;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding:.5rem;
+}
+
  
 /*Media Query*/
 @media only screen and (min-width: 375px){ 
-    #headline .content{
+    #introduction{
+        background-position: 180% 90%;
+        background-size: 70%;
+    }
+
+    #headline h1{
+        font-size: 3rem;
+    }
+    
+    #headline .title{
         width: 80%;
+        font-size: 1.7rem;
+    }
+
+    #headline .content{
+        width: 70%;
     }
 
     .social ul{
         margin:3rem 0 0 4rem;
     }
+
+    /*work section*/
+    .class-list a{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    #first-card button{
+        font-size: 1rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .second-card{       
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    /*about section*/
+    #about{
+        background-position: 220% 20%;
+        background-size: 75%;
+    }
+    
+    #about-title hr{
+        margin-top: 7.5rem;  
+    }
+
+    .Lang{
+        font-size: 1.5rem;
+    }
+    
+    .Lang li{
+        font-size: 1rem;
+    }
+    
     }
     
     
@@ -481,7 +622,140 @@ nav a{
     .social a{
         font-size: 1rem;
     }
+
+    /*work section*/
+    #portfolio{
+        width: 90%;
+        margin: 0 auto;  
+    }
+
+    #portfolio span{
+        display: inline;
+    }
+
+    #portfolio p{    
+        font-size: 2rem;
+        text-align: left;
+        margin: 6rem 0 0 8rem;
+    }
+
+    #portfolio hr{
+       width: 58%;
+       margin-top:-1rem; 
+       margin-right: 8rem;
+    }
+
+    #first-card{
+        width: 100%;
+        margin: 0 auto;
+    }
     
+    #first-card img{
+        width: 55%;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .card-content{
+        width:30%; 
+        margin-top: -15rem;
+    }
+    
+    #first-card h1{
+        font-size: 2.5rem;
+        margin-left: -3rem;
+    }
+    
+    #first-card p{
+        margin-top:1rem;
+        font-size: 1rem;
+        margin-left: -3rem;
+    }
+    
+    .language{
+        margin-top: 1rem;
+        margin-left: -3rem;
+    }
+    
+    .class-list a{
+        padding:.5rem;
+        font-size: .8rem;
+    }
+    
+    #first-card button{
+        margin-left: -3rem;
+    }
+   
+    .second-card{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card2-content{
+        top: 25%; 
+    }
+    
+    .languages{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card2-content .btn{
+        display:none;
+    }
+
+    /*about me*/
+    #about{
+        background-position: 100% 15%;
+        background-size: 40%;   
+    }
+    
+    #about-title{
+        display: inline-block;
+        padding: 5rem 0 0 5rem;
+    }
+    
+    #about-title h1{
+        margin: 5rem 0 0 2rem;
+    }
+    
+    #about-title .content{
+        width: 40%; 
+    }
+    
+    #resume-btn{
+        margin: 2rem 0 15rem 2rem;
+    }
+        
+    #about-title hr{
+        width: 80%;
+        margin: 0 auto;
+        color: #ffffff;
+    }
+    
+    .frameworks{
+        display: flex;
+        justify-content: space-evenly;
+        align-self: flex-start;
+        margin-top: 4rem;
+        padding-bottom: 6rem;
+    }
+    
+    .Lang{
+        font-size: 1.5rem;
+        text-align: left;
+        color:#ffffff;
+        margin-top: 1rem;
+    }
+     
+    .Lang li{
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: .8rem;
+        align-self: self-start;
+        margin-top: 1rem;
+    }
+
     }
     
     
