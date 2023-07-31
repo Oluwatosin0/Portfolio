@@ -655,7 +655,14 @@ footer{
     
     #first-card img{
         width: 60%;
-        margin-bottom: 3rem;
+        margin-bottom: 3rem;  
+    }
+
+    #first-card button:hover{
+        transform: rotate(0deg) translateX(50px);
+        background-color: #FFF5E1;
+        color: #FF6B00;
+
     }
 
     .card-content{
