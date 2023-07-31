@@ -21,6 +21,8 @@ Portfolio project exercise is fostered towards understanding how you can:
 
 # Hosting Platform
 -Github (https://oluwatosin0.github.io/Portfolio/)
+
+
 -Netlify (https://microverseportfolio.netlify.app/)
 
 # 👤 Author
