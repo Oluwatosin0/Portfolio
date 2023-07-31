@@ -253,7 +253,6 @@ nav a{
 }
 
 .languages{
-    
     display: flex;
     padding: .2rem;
     margin-top: 1rem;
@@ -614,8 +613,7 @@ footer{
         display:block;
         position: absolute;
         top:18%;
-        right:58%;
-       
+        right:58%;  
     }
     
     .social li{
@@ -704,12 +702,20 @@ footer{
     }
 
     .card2-content{
-        top: 18%; 
+        top: 20%;
+ 
     }
     
     .languages{
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 2rem;
+    }
+
+    .class-lists a{
+        padding:.7rem;
+        font-size: 1rem;
+        margin: .3rem;
+       
     }
 
     .card-img .btn{
@@ -740,23 +746,19 @@ footer{
     }
         
     #about-title hr{
-        margin: 0 auto;
-       
+        margin: 0 auto; 
     }
     
     .frameworks{
         display: flex;
         justify-content: space-evenly;
         align-self: flex-start;
-        
-        
     }
     
     .Lang{
         font-size: 1.5rem;
         text-align: left;
-        color:#ffffff;
-       
+        color:#ffffff;  
     }
      
     .Lang li{
