@@ -17,38 +17,80 @@ body{
     overflow: auto;
 }
 
-nav{
-    display:flex;
-    justify-content: space-between;
+header{
     background-color: #3E3C3C;
 }
 
-nav h1 {
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center; 
-    padding: 1rem 1rem;
-    margin: 1rem 0 0 1rem;
+li{
+    list-style: none;
 }
 
-#bars {
+a{
     color: #ffffff;
-    padding: 1rem 1rem;
-    margin: 1rem 1rem 0 0; 
+    text-decoration: none;
 }
 
-nav a{
+.navbar{
+    min-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-branding{
     font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+} 
+
+.nav-branding.active{
+    display: none;
 }
 
-#bars i:hover{
-    color:#FF6B00
+.nav-menu{
+    display: none;
 }
 
-#desktop{
-    display:none;
+.nav-menu.active{
+    display: block;
+    top: 4.5rem;
+    gap: 0;
+    flex-direction: column;
+    background-color: #3E3C3C;
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;   
+}
+
+.nav-item{
+    margin: 1rem 0;
+}
+
+
+.hamburger{
+    display: block;
+}
+
+.bar{
+    display: block;
+    width: 2rem;
+    height:.3rem;
+    margin: 5px auto;
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 #introduction{
@@ -111,6 +153,7 @@ nav a{
     font-size: 1.2rem;
     cursor: pointer;
     padding:.5rem;
+    transition: all 0.7s ease-in-out;
 }
 
 .social a:hover{
@@ -145,9 +188,9 @@ nav a{
 
 #first-card{
     display:flex;
-    flex-wrap: wrap; 
     justify-content: center;
-    align-items: center;   
+    align-items: center;  
+    flex-wrap: wrap;  
 }
 
 #first-card img{
@@ -216,20 +259,23 @@ nav a{
 }
 
 .card-img {
+    width:90%;
+    margin: 0 auto;
     position: relative;
        
 }
 
 .card-img img{
-    max-width:100%;;
+    width:100%;
     height: auto;
     margin-top: 1rem;
 }
 
 
 .card2-content{
+    width: 90%;
     position: absolute;
-    top: 18%; 
+    top: 14%; 
 }
 
 .second-card h1{
@@ -251,9 +297,8 @@ nav a{
 
 .languages{
     display: flex;
-    padding: .5rem;
+    padding: .2rem;
     margin-top: 1rem;
-    margin-bottom: 2rem;
 }
 
 .class-lists{
@@ -267,12 +312,12 @@ nav a{
     color: #ffffff;
     padding:.7rem;
     font-size: 1rem;
-    margin: .3rem;
+    margin: .5rem;
     text-decoration: none;
     border: none;
 }
 
-.card2-content .btn{
+.card-img .btn{
     width: 100%;
     background-color: #FF6B00;
     color: #ffffff;
@@ -280,19 +325,20 @@ nav a{
     font-weight: 700;
     font-size: 1.2rem;
     padding: 1rem 3rem;
-    margin-bottom: 3rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
     text-align: center;
     border: none;
     white-space: nowrap;  
     cursor: pointer;  
 }
 
-.card2-content .btn:hover{
+.card-img .btn:hover{
     background-color: #FFF5E1;
     color: #FF6B00;
 }
 
-.card2-content .btn:active{
+.card-img .btn:active{
     background-color: #E05304;
 }
 
@@ -304,7 +350,7 @@ nav a{
     background-color: #1C1A19;
     background-image: url(./assets/images/illustration-about\ me@2x.png);
     background-repeat: no-repeat;
-    background-position: 220% 32%;
+    background-position: 250% 32%;
     background-size: 75%;
 }
 
@@ -394,10 +440,8 @@ nav a{
 }
 
 /*contact section*/
-.contact{
+#contact{
     width: 100%;
-    height: 100vh;
-    
     display: flex;
     flex-direction: column;
 }
@@ -413,7 +457,7 @@ nav a{
     font-weight: 700;
     font-family: 'Inter', sans-serif;
     text-align: center;
-    font-size: 1.7rem; 
+    font-size: 1.5rem; 
 }
 
 form{
@@ -469,7 +513,6 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 1rem 0 3rem 0;
-
 }
 
 .footer-icons li{
@@ -543,51 +586,45 @@ footer{
     
     }
     
-    
+  
 @media only screen and (min-width: 768px){
-    nav h1{
-        margin-left: 6rem;
+    .navbar{
+        padding: 0 5rem;
     }
-    
-    #bars{
-        display:none;
-    }
-    
-    #desktop{
+
+    .nav-menu{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        gap: 3rem;
     }
     
-    #desktop ul{
-        display: flex;
-        margin: 1rem 6rem 0 0;
-    }
-    
-    #desktop li{
-        list-style-type: none;  
-    }
-    
-    #desktop a{
+    .nav-link{
         font-family: 'Inter', sans-serif;
         color: #ffffff;
         font-size: 1rem;
-        padding: 1.2rem;
         text-decoration: none;
         cursor: pointer;
+        transition: 0.7s ease;
     }
     
-    #desktop a:hover{
+    .nav-link:hover{
         color: #FF6B00;
     }
-
+   
+    .hamburger {
+        display: none;
+        cursor: pointer; 
+    }
+    
     #introduction{
-        background-position:right top;
-        background-size: 30% 90%; 
+        background-position: 105% 5%;
+        background-size: 40%; 
     }
 
     #headline{
         display:block; 
+        margin-top: 3.5rem;
     }
         
     #headline h1{
@@ -610,17 +647,16 @@ footer{
     .social ul{
         display:block;
         position: absolute;
-        top:15%;
-        right:58%;
-       
+        top:18%;
+        right:58%;  
     }
     
     .social li{
-        padding: .6rem;
+        padding: .4rem;
     }
     
     .social a{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     /*work section*/
@@ -630,51 +666,59 @@ footer{
     }
 
     #portfolio span{
-        display: inline;
+        display: flex;
+        flex-direction: column;
     }
 
     #portfolio p{    
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-align: left;
-        margin: 6rem 0 0 8rem;
+        margin: 4rem 0 2rem 2rem;
     }
 
     #portfolio hr{
-       width: 58%;
-       margin-top:-1rem; 
-       margin-right: 8rem;
+       width: 68%;
+       margin-top:-3rem; 
+       margin-right: .5rem;
+       margin-bottom: 2rem;
     }
 
     #first-card{
         width: 100%;
-        margin: 0 auto;
+        height: auto;
     }
     
     #first-card img{
-        width: 55%;
-        margin-right: 2rem;
-        margin-bottom: 3rem;
+        width: 60%;
+        margin-bottom: 3rem;  
+    }
+
+    #first-card button:hover{
+        transform: rotate(0deg) translateX(50px);
+        background-color: #FFF5E1;
+        color: #FF6B00;
     }
 
     .card-content{
-        width:30%; 
-        margin-top: -15rem;
+        width:40%; 
+        margin-top: -5rem;  
     }
     
     #first-card h1{
-        font-size: 2.5rem;
-        margin-left: -3rem;
+        font-size: 2rem;
+        margin-left: .5rem;
     }
     
     #first-card p{
         margin-top:1rem;
         font-size: 1rem;
-        margin-left: -3rem;
+        margin-top: 0;
+        margin-left: .5rem;
     }
     
     .language{
-        margin-top: 1rem;
-        margin-left: -3rem;
+        margin-top: -1rem;
+        margin-left: .5rem;
     }
     
     .class-list a{
@@ -683,30 +727,44 @@ footer{
     }
     
     #first-card button{
-        margin-left: -3rem;
+        margin-top: 2rem;
+        margin-left: .5rem;
     }
    
     .second-card{
         width: 100%;
-        margin: 0 auto;
+    }
+
+    .card-img{
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
     }
 
     .card2-content{
-        top: 25%; 
+        top: 20%;
+ 
     }
     
     .languages{
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 2rem;
     }
 
-    .card2-content .btn{
+    .class-lists a{
+        padding:.7rem;
+        font-size: 1rem;
+        margin: .3rem;
+       
+    }
+
+    .card-img .btn{
         display:none;
     }
 
     /*about me*/
     #about{
-        background-position: 100% 15%;
+        background-position: 100% 18%;
         background-size: 40%;   
     }
     
@@ -724,28 +782,23 @@ footer{
     }
     
     #resume-btn{
-        margin: 2rem 0 15rem 2rem;
+        margin: 2rem 0 8rem 2rem;
     }
         
     #about-title hr{
-        width: 80%;
-        margin: 0 auto;
-        color: #ffffff;
+        margin: 0 auto; 
     }
     
     .frameworks{
         display: flex;
         justify-content: space-evenly;
         align-self: flex-start;
-        margin-top: 4rem;
-        padding-bottom: 6rem;
     }
     
     .Lang{
         font-size: 1.5rem;
         text-align: left;
-        color:#ffffff;
-        margin-top: 1rem;
+        color:#ffffff;  
     }
      
     .Lang li{
@@ -754,6 +807,57 @@ footer{
         font-size: .8rem;
         align-self: self-start;
         margin-top: 1rem;
+    }
+
+    /*Contact*/
+    #contact{
+        flex-direction: row;
+        margin-bottom: 6rem;
+    }
+
+    .contact-text{
+        margin: 8rem 0 0 0; 
+    }
+    
+    .contact-text h2{
+        width: 55%;
+        text-align: left;
+        color:#262626;
+        font-size: 1.8rem; 
+    }
+    
+    form{
+        width: 100%;
+        margin: 8rem 10rem 0 0; 
+        text-align: left;
+    }
+    
+    input{
+        width: 100%;
+        font-size: 1rem;
+        font-family: 'Inter', sans-serif;
+        padding: .6rem;
+        color:#979493;
+        border: none;
+    }
+    
+    #message{
+        width: 100%;
+        height: 30%;
+    }
+    
+    form button{
+        background-color: #FF6B00;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: 'Inter', sans-serif;
+        padding: .7rem;
+        cursor: pointer;
+        border: none;
+    }
+
+    footer hr{
+        margin-top: 2rem;
     }
 
     }
