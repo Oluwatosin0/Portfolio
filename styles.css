@@ -66,7 +66,6 @@ a{
     margin: 1rem 0;
 }
 
-
 .hamburger{
     display: block;
 }
@@ -181,6 +180,12 @@ a{
    margin:0 auto; 
 }
 
+#portfolio.blur.active{
+    filter: blur(1rem);
+    pointer-events: none;
+    user-select: none;
+}
+
 #card-container{
     display: grid;
     margin: 3rem 0 6rem 0;
@@ -191,6 +196,7 @@ a{
     justify-content: center;
     align-items: center;  
     flex-wrap: wrap;  
+    margin-bottom: 2rem;
 }
 
 #first-card img{
@@ -222,7 +228,8 @@ a{
 .language{
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
 }
 
 .class-list{
@@ -239,17 +246,31 @@ a{
     border: 1px solid #8993A4;
 }
 
-#first-card button{
+.project{
+    position: relative;
     background-color: #FF6B00;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: .8rem;
     padding: .7rem 1rem;
-    margin-top: 1.5rem;
     border: none;
     cursor: pointer;
 }
+
+.project:hover{
+    background-color: #FFF5E1;
+    color: #FF6B00;
+}
+
+/*.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+}*/
 
 .second-card{
     display:flex;
@@ -268,9 +289,7 @@ a{
 .card-img img{
     width:100%;
     height: auto;
-    margin-top: 1rem;
 }
-
 
 .card2-content{
     width: 90%;
@@ -325,8 +344,8 @@ a{
     font-weight: 700;
     font-size: 1.2rem;
     padding: 1rem 3rem;
-    margin-top: -1rem;
-    margin-bottom: 2rem;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
     text-align: center;
     border: none;
     white-space: nowrap;  
@@ -340,6 +359,111 @@ a{
 
 .card-img .btn:active{
     background-color: #E05304;
+}
+
+/*Detail Popup*/
+#popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    min-height: 100vh ;
+    padding: .5rem;
+    min-height: 100vh;
+    display: flex;
+    box-shadow: 0 5px 30px rgba(0,0,0,.30);
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #ffffff;
+    visibility: hidden;
+    opacity:0;
+    transition: .8s;  
+}
+
+#popup.active{
+    top: 250%;
+    visibility: visible;
+    opacity:1;
+    transition: 0.5s;   
+}
+
+#popup span{
+    display: flex;
+    justify-content: space-between;
+    padding: .2rem;
+    margin: 1rem .1rem;
+}
+
+#popup span h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #172B4D;
+    font-family: 'Roboto', sans-serif;
+}
+
+#popup span i{
+    font-size: 2.5rem;
+    color: #172B4D;
+}
+
+#popup-language{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+}
+
+.list{
+    margin: .3rem;
+}
+
+.list a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: #ffffff;
+    color:  hsl(20, 3%, 23%);
+    padding:.3rem;
+    font-size: 1rem;
+    margin: .1rem;
+    text-decoration: none;  
+    border: 1px solid #3C3A39; 
+}
+
+#popup img{
+    width: 100%;
+}
+
+#popup p{
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #344563;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+}
+
+.buttons a{
+    width: 45%;
+    padding: .5rem .8rem;
+    background-color: #FF6B00;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: .8rem;
+    text-align: center;
+  
+}
+
+.buttons a i{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    
 }
 
 
@@ -555,8 +679,12 @@ footer{
         padding: 1rem;
         font-size: 1rem;
     }
+
+    .language{
+        margin-bottom: 3rem;
+    }
     
-    #first-card button{
+    .project{
         font-size: 1rem;
         padding: 1rem 1.2rem;
     }
@@ -693,12 +821,6 @@ footer{
         margin-bottom: 3rem;  
     }
 
-    #first-card button:hover{
-        transform: rotate(0deg) translateX(50px);
-        background-color: #FFF5E1;
-        color: #FF6B00;
-    }
-
     .card-content{
         width:40%; 
         margin-top: -5rem;  
@@ -726,9 +848,15 @@ footer{
         font-size: .8rem;
     }
     
-    #first-card button{
+   .project{
         margin-top: 2rem;
         margin-left: .5rem;
+    }
+
+    .project:hover{
+        transform: rotate(0deg) translateX(100px);
+        background-color: #FFF5E1;
+        color: #FF6B00;
     }
    
     .second-card{
