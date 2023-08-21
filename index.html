@@ -68,12 +68,12 @@
 
     <!--work section-->
 <section>
-    <div id="portfolio">
+    <div id="portfolio" class="blur" >
         <span>
         <p>My Recent Works</p>
         <hr>
         </span>
-     <div id="card-container">
+     <div id="card-container" >
             <div id="first-card">
                 <img src="./assets/images/Img Placeholder.png" alt="Card-1">
                 <div class="card-content">
@@ -87,7 +87,15 @@
                     <li class="class-list"><a href="#">Bootstrap</a></li>
                     <li class="class-list"><a href="#">Ruby</a></li>
                 </ul>
-                <button type="button">See project</button>
+                <button class="project" onclick="toggle()">See project</button>
+
+                
+                <!--<button class="project show-modal">See project</button>
+                <span class="overlay"></span>
+
+                <div class="modal-box">
+                   
+                </div>-->
             </div>
             </div>
 
@@ -104,7 +112,7 @@
                     <li class="class-lists"><a href="#">Ruby</a></li>
                     </ul> 
                 </div>
-                <button class="btn" type="button">See project</button>
+                <button class="btn" onclick="toggle()">See project</button>
             </div>
 
                 <div class="card-img">
@@ -119,7 +127,7 @@
                 <li class="class-lists"><a href="#">Ruby</a></li>
                 </ul>
             </div>
-            <button class="btn" type="button">See project</button>
+            <button class="btn" onclick="toggle()">See project</button>
         </div>
 
                 <div class="card-img">
@@ -134,7 +142,7 @@
                 <li class="class-lists"><a href="#">Ruby</a></li>
                 </ul>
             </div>
-            <button class="btn" type="button">See project</button>
+            <a href=""><button class="btn" onclick="toggle()">See project</button></a>
         </div>
 
                     <div class="card-img">
@@ -149,7 +157,7 @@
                     <li class="class-lists"><a href="#">Ruby</a></li>
                     </ul>
                 </div>
-                <button class="btn" type="button">See project</button>
+                <button class="btn" onclick="toggle()">See project</button>
             </div>  
 
                 <div class="card-img">
@@ -164,8 +172,9 @@
                 <li class="class-lists"><a href="#">Ruby</a></li>
                 </ul>
             </div>
-            <button class="btn" type="button">See project</button>
+            <button class="btn" onclick="toggle()">See project</button>
             </div>
+            
 
                     <div class="card-img">
                     <img src="./assets/images/Mask Group.png" alt="Card-2">
@@ -179,10 +188,32 @@
                     <li class="class-lists"><a href="#">Ruby</a></li>
                     </ul>
                 </div>
-                <button class="btn" type="button">See project</button>
+                <button class="btn" onclick="toggle()">See project</button>
             </div>
             </div>
     </div>
+    </div>
+    <div id="popup">
+        <span>
+            <h1>Multi Post Stories</h1>
+            <i class="fa fa-times" onclick="toggle()" aria-hidden="true"></i>
+        </span>
+        <ul id="popup-language">
+            <li class="list"><a href="#">HTML</a></li>
+            <li class="list"><a href="#">Bootstrap</a></li>
+            <li class="list"><a href="#">Ruby on Rails</a></li>
+        </ul>
+        <img src="./assets/images/popup.png" alt="popup-image">
+        <p class="popup-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essential
+        </p>
+        <div class="buttons">
+            <a href="#"> See live <i class="fa fa-rss" aria-hidden="true"></i></a>
+            <a href="#"> See source <i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
     </div>
 </section>
 
