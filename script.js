@@ -13,3 +13,21 @@ document.querySelectorAll(".nav-link").forEach (n => n.addEventListener("click",
     navMenu.classList.remove("active");
     navBranding.classList.remove("active");
 }))
+
+/*popup detail */
+const popup = [
+    "name",
+    "description",
+    "featured image",
+    "technologies",
+    "link to live version",
+    "link to source"
+]
+
+function toggle(){
+    const blur = document.querySelector(".blur");
+    blur.classList.toggle("active");
+
+    const popup = document.getElementById("popup");
+    popup.classList.toggle("active");
+}
