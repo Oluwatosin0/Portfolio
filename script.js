@@ -15,14 +15,13 @@ document.querySelectorAll(".nav-link").forEach (n => n.addEventListener("click",
 }))
 
 /*popup detail */
-const popup = [
-    "name",
-    "description",
-    "featured image",
-    "technologies",
-    "link to live version",
-    "link to source"
-]
+const popup = {
+    name: 'name',
+    description: 'description',
+    featuredImage: 'featured-image',
+    linkToLiveVersion: 'link-to-live-version',
+    linkToSource: 'link-to-source'
+}
 
 function toggle(){
     const blur = document.querySelector(".blur");
