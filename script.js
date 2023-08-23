@@ -30,3 +30,43 @@ function toggle(){
     const popup = document.getElementById("popup");
     popup.classList.toggle("active");
 }
+
+/*form validation */
+const form = document.querySelector("form");
+const email = document.getElementById("mail");
+const error = email.nextElementSibling;
+const emailRegExp = /^([a-z0-9\._]+)@([a-z0-9])+.([a-z]+)(.[a-z]+)?$/
+
+window.addEventListener('load', () => {
+    const isValid = email.value.length === 0 || emailRegExp.test(email.value);
+    email.className = isValid ? "valid" : "invalid";
+});
+
+email.addEventListener('input', () => {
+    const isValid = email.value.length === 0 || emailRegExp.test(email.value);
+    if (isValid) {
+        email.className = "valid";
+        error.textContent = "";
+        error.className = "error";
+      } else {
+        email.className = "invalid";
+      }
+});
+
+form.addEventListener("submit", (event) => {
+    const isValid = email.value.length === 0 || emailRegExp.test(email.value);
+    if (!isValid) {
+      event.preventDefault();
+      email.className = "invalid";
+      error.textContent = "email field has to be in lower case";
+      error.className = "error active";
+    } else {
+      email.className = "valid";
+      error.textContent = " ";
+      error.className = "error active";
+    }
+  });
+
+
+
+

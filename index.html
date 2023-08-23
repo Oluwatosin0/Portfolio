@@ -246,20 +246,21 @@
                 <h2>I'm always interested in hearing about new projects, 
                     so if you'd like to chat please get in touch.</h2>
             </div>
-            <form>
+            <form  action="/">
                 <label for="name">
                 <input type="text" id="name" name="names" minlength="1" maxlength="30" placeholder="Full name">
                 <hr>
             </label><br>
                 <label for="mail">
                 <input type="email" id="mail" name="email" placeholder="Email address" required>
+                <span class="error" aria-live="polite"></span>
                 <hr>
             </label><br>
             <label for="message">
                 <textarea name="text" id="message" minlength="1" maxlength="500"
                  placeholder="Write me something..."></textarea>
             </label><br><br>
-            <button>Get in touch</button>
+            <button type="submit">Get in touch</button>
             </form>
         </div>
     </section>
@@ -312,3 +313,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
