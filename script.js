@@ -68,5 +68,27 @@ form.addEventListener("submit", (event) => {
   });
 
 
+// Local Storage 
+    function formInfo() {
+    const nameInput = document.getElementById('Full_name').value;
+    const emailInput = document.getElementById('mail').value;
+    const messageInput = document.getElementById('message').value;
+  
+    const formInput = {
+    username: nameInput,
+    email: emailInput,
+    message: messageInput,
+    };
+
+    localStorage.setItem('formInput', JSON.stringify(formInput));
+  }
+
+  //Event Listeners
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formInfo();
+  });
+
+
 
 
