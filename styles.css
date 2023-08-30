@@ -909,6 +909,7 @@ footer{
     
     .name{
         font-size: 2.5rem;
+        margin-left: .6rem;
     }
     
     #popup span i{
@@ -918,7 +919,7 @@ footer{
     
     .technologies{
         margin-top:.2rem;
-        margin-left: 1rem;
+        margin-left: 1.5rem;
     }
     
     .list{
@@ -932,8 +933,10 @@ footer{
 
     .popup-content{
         display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         width: 100%;
-        margin: .5rem 1.5rem;
+        margin-bottom: 2rem;
     }
     
     .featured-image{
@@ -943,11 +946,12 @@ footer{
     .description{
         width: 30%;
         color: #344563;
+
     }
 
-    .lg{
-        display: block;
-        text-align: left;
+    .buttons{
+        margin-top: -5rem;
+        margin-left: 1rem;
     }
 
     .buttons a{
@@ -964,10 +968,14 @@ footer{
     
     .buttons a i{
         font-size: 1.2rem;
-        margin-left: 1rem; 
+        margin-left: 1rem;
+        
     }
     
     
+
+   
+
     /*about me*/
     #about{
         background-position: 100% 18%;
