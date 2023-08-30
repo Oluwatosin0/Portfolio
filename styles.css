@@ -617,6 +617,26 @@ form button:active{
     background-color: #E05304;
 }
 
+input[type="email"]:invalid {
+    border-color: #E05304; 
+  }
+  
+  input[type="email"]:focus:invalid {
+    outline: none;
+  }
+
+  .error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #FF6B00;
+  }
+  
+  .error.active {
+    padding: .2rem;
+  }
+
 
 /*footer*/
 footer{
