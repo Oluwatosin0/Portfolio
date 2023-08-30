@@ -909,7 +909,6 @@ footer{
     
     .name{
         font-size: 2.5rem;
-        margin-left: 1.5rem;
     }
     
     #popup span i{
@@ -919,7 +918,7 @@ footer{
     
     .technologies{
         margin-top:.2rem;
-        margin-left: 2.5rem;
+        margin-left: 1rem;
     }
     
     .list{
@@ -933,9 +932,8 @@ footer{
 
     .popup-content{
         display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 2rem;
         width: 100%;
+        margin: .5rem 1.5rem;
     }
     
     .featured-image{
@@ -945,12 +943,11 @@ footer{
     .description{
         width: 30%;
         color: #344563;
-        font-size: 1rem;
     }
 
-    .buttons{
-        margin-top: -4rem;
-        margin-right: 2rem;
+    .lg{
+        display: block;
+        text-align: left;
     }
 
     .buttons a{
