@@ -17,21 +17,21 @@ document.querySelectorAll(".nav-link").forEach (n => n.addEventListener("click",
 /*popup detail */
 
 function popupInfo() {
-    const nameInput = document.getElementsByClassName('name').value;
-    const descriptionInput = document.getElementsByClassName('description').value;
-    const techInput = document.getElementsByClassName('technologies').value;
-    const imageInput = document.getElementsByClassName('featured-image').value;
-    const liveInput = document.getElementsByClassName('link-to-live-version').value;
-    const sourceInput = document.getElementsByClassName('link-to-source').value;
+  const nameInput = document.getElementsByClassName('name').value;
+  const descriptionInput = document.getElementsByClassName('description').value;
+  const techInput = document.getElementsByClassName('technologies').value;
+  const imageInput = document.getElementsByClassName('featured-image').value;
+  const liveInput = document.getElementsByClassName('link-to-live-version').value;
+  const sourceInput = document.getElementsByClassName('link-to-source').value;
 
-    const popupInput = {
-    username: nameInput,
-    description: descriptionInput,
-    technologies: techInput,
-    featuredImage:imageInput,
-    liveVersion: liveInput,
-    linkSource: sourceInput,
-  }
+  const popupInput = {
+  username: nameInput,
+  description: descriptionInput,
+  technologies: techInput,
+  featuredImage:imageInput,
+  liveVersion: liveInput,
+  linkSource: sourceInput,
+}
 
 }
 
