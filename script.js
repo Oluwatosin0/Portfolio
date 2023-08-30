@@ -15,12 +15,24 @@ document.querySelectorAll(".nav-link").forEach (n => n.addEventListener("click",
 }))
 
 /*popup detail */
-const popup = {
-    name: 'name',
-    description: 'description',
-    featuredImage: 'featured-image',
-    linkToLiveVersion: 'link-to-live-version',
-    linkToSource: 'link-to-source'
+
+function popupInfo() {
+  const nameInput = document.getElementsByClassName('name').value;
+  const descriptionInput = document.getElementsByClassName('description').value;
+  const techInput = document.getElementsByClassName('technologies').value;
+  const imageInput = document.getElementsByClassName('featured-image').value;
+  const liveInput = document.getElementsByClassName('link-to-live-version').value;
+  const sourceInput = document.getElementsByClassName('link-to-source').value;
+
+  const popupInput = {
+  username: nameInput,
+  description: descriptionInput,
+  technologies: techInput,
+  featuredImage:imageInput,
+  liveVersion: liveInput,
+  linkSource: sourceInput,
+}
+
 }
 
 function toggle(){
@@ -30,6 +42,7 @@ function toggle(){
     const popup = document.getElementById("popup");
     popup.classList.toggle("active");
 }
+
 
 /*form validation */
 const form = document.querySelector("form");
