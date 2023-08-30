@@ -899,26 +899,27 @@ footer{
     #popup{
         top: 20%;
         left: 50%;
-        width: 80%;
-        height: 60%;
+        width: 70%;
+        min-height: 50%;
     }
         
     #popup span{
-        padding: .2rem;
         margin: 1.5rem;
     }
     
     .name{
         font-size: 2.5rem;
+        margin-left: .6rem;
     }
     
     #popup span i{
         font-size: 3rem;
+        margin-right: 2rem;
     }
     
     .technologies{
         margin-top:.2rem;
-        margin-left: 1rem;
+        margin-left: 1.5rem;
     }
     
     .list{
@@ -932,8 +933,10 @@ footer{
 
     .popup-content{
         display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         width: 100%;
-        margin: .5rem 1.5rem;
+        margin-bottom: 2rem;
     }
     
     .featured-image{
@@ -942,17 +945,17 @@ footer{
 
     .description{
         width: 30%;
-        text-align: left;
         color: #344563;
+
     }
 
-    .lg{
-        display: block;
-        text-align: left;
+    .buttons{
+        margin-top: -5rem;
+        margin-left: 1rem;
     }
-    
+
     .buttons a{
-        width: 40%;
+        width: 15%;
         padding: .5rem .8rem;
         background-color: #FF6B00;
         color: #ffffff;
@@ -960,7 +963,7 @@ footer{
         font-weight: 700;
         font-size: .8rem;
         text-align: center;
-      
+        float: right;
     }
     
     .buttons a i{
